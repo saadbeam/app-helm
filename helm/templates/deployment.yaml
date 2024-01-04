@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: saadbeam/apps:{{ .Values.env.APP_VERSION }}
+          image: saadbeam/app-helm:{{ .Values.env.APP_VERSION }}
           ports:
             - containerPort: 3000
           env:
