@@ -26,3 +26,5 @@ ingress:
       paths:
         - /
   tls: false  # Set to true if you have TLS enabled for your Ingress
+
+
