@@ -16,3 +16,13 @@ autoscaling:
   maxReplicas: 5
   targetCPUUtilizationPercentage: 80
   targetMemoryUtilizationPercentage: 70
+
+# values.yaml
+
+ingress:
+  enabled: true
+  hosts:
+    - name:  # Replace with your actual Ingress hostname or leave it blank if you don't have one
+      paths:
+        - /
+  tls: false  # Set to true if you have TLS enabled for your Ingress
