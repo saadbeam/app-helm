@@ -1,2 +1,11 @@
 env:
   APP_VERSION: v1.0
+
+# values.yaml
+serviceAccount:
+  create: true
+  automount: true
+  annotations:
+    key1: value1
+    key2: value2
+
