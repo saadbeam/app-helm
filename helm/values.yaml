@@ -9,6 +9,9 @@ serviceAccount:
     key1: value1
     key2: value2
 
+service:
+  port: 80
+
 # values.yaml
 autoscaling:
   enabled: true
