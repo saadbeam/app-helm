@@ -1,27 +1,8 @@
-# apiVersion: networking.k8s.io/v1
-# kind: Ingress
-# metadata:
-#   name: ingress
-#   namespace: apps
-#   annotations:
-#     nginx.ingress.kubernetes.io/rewrite-target: /
-# spec:
-#   rules:
-#     - http:
-#         paths:
-#           - path: /
-#             pathType: Prefix
-#             backend:
-#               service:
-#                 name: app-service
-#                 port:
-#                   number: 3000
-
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: argocd-ingress
-  namespace: argocd
+  name: ingress
+  namespace: apps
   annotations:
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
@@ -44,7 +25,7 @@ spec:
           - path: /
             backend:
               service:
-                name: argocd-server
+                name: app-service
                 port:
                   number: 3000
             pathType: Prefix
