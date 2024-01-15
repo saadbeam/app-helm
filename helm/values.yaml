@@ -21,6 +21,9 @@ autoscaling:
 
 ingress:
   enabled: true
-  tls: false  # Set to true if you have TLS enabled for your Ingress
-
+  hosts:
+    - name: # Replace with your actual Ingress hostname or leave it blank if you don't have one
+      paths:
+        - /
+  tls: false # Set to true if you have TLS enabled for your Ingress
 
