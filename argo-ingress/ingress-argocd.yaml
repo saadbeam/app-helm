@@ -6,7 +6,7 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
-    alb.ingress.kubernetes.io/certificate-arn: {your certificate arn}
+    alb.ingress.kubernetes.io/certificate-arn: " arn:aws:acm:eu-central-1:192197866607:certificate/6a2a92ac-8c30-40f6-b282-e50168bd67d2"
     alb.ingress.kubernetes.io/ssl-policy: ELBSecurityPolicy-2016-08
     alb.ingress.kubernetes.io/backend-protocol: HTTPS
     alb.ingress.kubernetes.io/healthcheck-path: /login
