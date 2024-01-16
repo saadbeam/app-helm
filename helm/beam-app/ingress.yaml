@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: beam-api
+  annotations:
+    alb.ingress.kubernetes.io/scheme: internet-facing
+
+spec:
+  ingressClassName: alb
+  rules:
+    - host: echo.staging.beamstudio.ai
+      http:
+        paths:
+          - pathType: Prefix
+            path: '/'
+            backend:
+              service:
+                name: test-service
+                port:
+                  number: 3000
