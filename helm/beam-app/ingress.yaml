@@ -4,6 +4,7 @@ metadata:
   name: beam-api
   annotations:
     alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/target-type: ip
 
 spec:
   ingressClassName: alb
@@ -15,6 +16,6 @@ spec:
             path: '/'
             backend:
               service:
-                name: test-service
+                name: nginx-service
                 port:
-                  number: 3000
+                  number: 80
